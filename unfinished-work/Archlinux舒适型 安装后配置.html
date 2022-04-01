@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"arthurgxy.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Archlinux舒适型 安装后配置ArchlinuxCN源&#x2F;etc&#x2F;pacman.conf中添加以下设置 这里使用的是中科大源，使用其他源可以在官方repo下找到。 123456[archlinuxcn]Server &#x3D; https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;archlinuxcn&#x2F;$arch# North America[archlinuxcn]Server &#x3D; https:">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arthur&#39;s messy room">
+<meta property="og:url" content="http://arthurgxy.github.io/unfinished-work/Archlinux%E8%88%92%E9%80%82%E5%9E%8B%20%E5%AE%89%E8%A3%85%E5%90%8E%E9%85%8D%E7%BD%AE.html">
+<meta property="og:site_name" content="Arthur&#39;s messy room">
+<meta property="og:description" content="Archlinux舒适型 安装后配置ArchlinuxCN源&#x2F;etc&#x2F;pacman.conf中添加以下设置 这里使用的是中科大源，使用其他源可以在官方repo下找到。 123456[archlinuxcn]Server &#x3D; https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;archlinuxcn&#x2F;$arch# North America[archlinuxcn]Server &#x3D; https:">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-01T18:46:15.890Z">
+<meta property="article:modified_time" content="2022-04-01T18:46:15.890Z">
+<meta property="article:author" content="Guo Xiaoyao">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://arthurgxy.github.io/unfinished-work/Archlinux%E8%88%92%E9%80%82%E5%9E%8B%20%E5%AE%89%E8%A3%85%E5%90%8E%E9%85%8D%E7%BD%AE">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"http://arthurgxy.github.io/unfinished-work/Archlinux%E8%88%92%E9%80%82%E5%9E%8B%20%E5%AE%89%E8%A3%85%E5%90%8E%E9%85%8D%E7%BD%AE.html","path":"unfinished-work/Archlinux舒适型 安装后配置.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | Arthur's messy room
+</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Arthur's messy room</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Some random stuff, ideas and technics</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Archlinux%E8%88%92%E9%80%82%E5%9E%8B-%E5%AE%89%E8%A3%85%E5%90%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">Archlinux舒适型 安装后配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ArchlinuxCN%E6%BA%90"><span class="nav-number">1.0.1.</span> <span class="nav-text">ArchlinuxCN源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.2.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Steam"><span class="nav-number">1.0.3.</span> <span class="nav-text">Steam</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WPS-%E6%A8%A1%E7%B3%8A%E9%97%AE%E9%A2%98"><span class="nav-number">1.0.4.</span> <span class="nav-text">WPS 模糊问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1-TIM%E7%AD%89Wine%E8%BD%AF%E4%BB%B6%E7%BC%BA%E5%A4%B1%E5%AD%97%E4%BD%93"><span class="nav-number">1.0.5.</span> <span class="nav-text">微信&#x2F;TIM等Wine软件缺失字体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fcitx5-%E8%BE%93%E5%85%A5%E6%B3%95"><span class="nav-number">1.0.6.</span> <span class="nav-text">fcitx5 输入法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">有用软件</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Guo Xiaoyao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h2 id="Archlinux舒适型-安装后配置"><a href="#Archlinux舒适型-安装后配置" class="headerlink" title="Archlinux舒适型 安装后配置"></a>Archlinux舒适型 安装后配置</h2><h4 id="ArchlinuxCN源"><a href="#ArchlinuxCN源" class="headerlink" title="ArchlinuxCN源"></a>ArchlinuxCN源</h4><p><code>/etc/pacman.conf</code>中添加以下设置</p>
+<p>这里使用的是中科大源，使用其他源可以在<a target="_blank" rel="noopener" href="https://github.com/archlinuxcn/mirrorlist-repo">官方repo</a>下找到。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="variable">$arch</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># North America</span></span><br><span class="line">[archlinuxcn]</span><br><span class="line">Server = https://mirror.xtom.com/archlinuxcn/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/pacman.conf <span class="comment"># 包管理器配置 增加/删除源（或镜像） 禁用某些包的更新</span></span><br><span class="line">～/.zshrc <span class="comment"># zsh配置文件</span></span><br><span class="line">～/.bashrc <span class="comment"># bash配置文件</span></span><br><span class="line">~/.pam_environment <span class="comment"># 用户配置文件</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="Steam"><a href="#Steam" class="headerlink" title="Steam"></a>Steam</h4><p>由于Steam是32位的程序，需要在<code>pacman</code>设置里打开<code>multilib</code>的源。找到以下两行之后解除注释即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[multilib]</span><br><span class="line">Include = /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
+
+<p>然后同步一下软件源，再安装<code>steam</code>或<code>steam-native-runtime</code>即可。</p>
+<h4 id="WPS-模糊问题"><a href="#WPS-模糊问题" class="headerlink" title="WPS 模糊问题"></a>WPS 模糊问题</h4><p>将启动命令前加上如下命令即可 (直接修改.desktop文件即可)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">env</span> QT_SCREEN_SCALE_FACTORS=1</span><br></pre></td></tr></table></figure>
+
+<h4 id="微信-TIM等Wine软件缺失字体"><a href="#微信-TIM等Wine软件缺失字体" class="headerlink" title="微信/TIM等Wine软件缺失字体"></a>微信/TIM等Wine软件缺失字体</h4><p>找一个字体扔进相应的wine环境对应的 C:/windows/Fonts 文件夹即可, 如 deepin-wechat 的位置在</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.deepinwine/Deepin-WeChat/drive_c/windows/Fonts</span><br></pre></td></tr></table></figure>
+
+<p>我使用的是来自deepin论坛的一款fake_simsun.ttc</p>
+<p>其实Arch的话下载所有文泉驿字体应该能解决（存疑），我之前没有下载完，回头有机会再安装一次的话可以实验一下。</p>
+<h4 id="fcitx5-输入法"><a href="#fcitx5-输入法" class="headerlink" title="fcitx5 输入法"></a>fcitx5 输入法</h4><p>输入法使用下来是很舒适的体验。我安装的包如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fcitx5 						<span class="comment"># 输入法本体</span></span><br><span class="line">fcitx5-anthy 				<span class="comment"># 日语输入法（已停止维护）</span></span><br><span class="line">fcitx5-breeze 				<span class="comment"># 皮肤文件，是KDE自带皮肤breeze风格的</span></span><br><span class="line">fcitx5-chinese-addons 		<span class="comment"># 中文相关组件，包含拼音五笔等输入法支持</span></span><br><span class="line">fcitx5-configtool 			<span class="comment"># GUI设置管理</span></span><br><span class="line">fcitx5-gtk 					<span class="comment"># GTK支持</span></span><br><span class="line">fcitx5-kkc 					<span class="comment"># 另一款日语输入法</span></span><br><span class="line">fcitx5-pinyin-moegirl 		<span class="comment"># 中文拼音词库 萌娘百科</span></span><br><span class="line">fcitx5-pinyin-zhwiki 		<span class="comment"># 中文拼音词库 中文维基</span></span><br><span class="line">fcitx5-qt 					<span class="comment"># QT支持</span></span><br></pre></td></tr></table></figure>
+
+<p>也有人喜欢rime输入法，那么安装<code>fcitx5-rime</code>即可，词库也应该换成相应的带<code>rime</code>词缀的词库包。</p>
+<p>安装后将如下变量写入用户目录下的 <code>.pam_environment</code> 文件即可改变默认输入法为fcitx。</p>
+<p>注意<code>fcitx5</code>和<code>fcitx</code>冲突，安装前记得删干净。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">GTK_IM_MODULE DEFAULT=fcitx</span><br><span class="line">QT_IM_MODULE  DEFAULT=fcitx</span><br><span class="line">XMODIFIERS    DEFAULT=\@im=fcitx</span><br><span class="line">INPUT_METHOD  DEFAULT=fcitx</span><br><span class="line">SDL_IM_MODULE DEFAULT=fcitx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="有用软件"><a href="#有用软件" class="headerlink" title="有用软件"></a>有用软件</h3><p><a target="_blank" rel="noopener" href="https://github.com/sharkdp/bat">bat</a>, 带语法高亮的cat</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S bat</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/shadowsocks/shadowsocks-qt5">shadowsocks-qt5</a>, 纸飞机客户端</p>
+<p>(wudao-dict)[<a target="_blank" rel="noopener" href="https://github.com/ChestnutHeng/Wudao-dict]">https://github.com/ChestnutHeng/Wudao-dict]</a>, 一款命令行字典，使用有道API</p>
+<p>baidupcs-go, 命令行百度云</p>
+<p>shotcut 视频剪辑软件</p>
+<p>flameshot 截图软件</p>
+<p>timeshift 备份工具</p>
+
+      </div>
+      
+      
+      
+    </div>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guo Xiaoyao</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
